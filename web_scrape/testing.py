@@ -18,16 +18,15 @@ def extract_text_from_url(url):
             # Parse the obtained HTML content using BeautifulSoup
             soup = BeautifulSoup(response.content, 'html.parser')
 
-            # results = soup.find(id="ResultsContainer")
-            # job_elements = soup.find_all()
-            # #print(job_elements)
-            # for job_element in job_elements:
-            #     title_element = job_element.find("h2")
-            #     company_element = job_element.find("h3")
-            #     location_element = job_element.find("p")
-            #     print(title_element)
-            #     print(company_element)
-            #     print(location_element)
+            results = soup.find(id="ResultsContainer")
+            job_elements = soup.find_all(['h1', 'h2', 'h3', 'p'])
+            #print(job_elements)
+            my_string = ""
+            for element in job_elements:
+                #my_string.join("-----------------------------------------\n" + element + 
+                #"-----------------------------------------\n")
+                my_string = my_string + (element.get_text(strip=True)) + "\n"
+
 
             # Remove script and style elements (as they won't have any useful text)
             for script_style_element in soup(['script', 'style']):
@@ -38,8 +37,9 @@ def extract_text_from_url(url):
             # Eliminate unwanted whitelines
             lines = [x.strip() for x in raw_text.split("\n") if x.strip()]
             final_text = "\n".join(lines)
-
-            return final_text
+            print(my_string)
+            #return final_text
+            return my_string
 
         else:
             print(f"An error occurred while fetching content from URL: {url}. Status code: {response.status_code}")
