@@ -47,11 +47,15 @@ def extract_text_from_url(url):
         print(f"An unexpected error occurred: {e}")
 
 if __name__ == "__main__":
-    url = "https://aws.amazon.com/solutions/case-studies/caremonitor/" # Replace this with the desired url
+    with open ('websites.txt', 'rt') as myfile:  # Open lorem.txt for reading
+        for myline in myfile:              # For each line, read to a string,
+            url = myline.strip()
+            print("Here is the website: " + myline + "END OF WEB")                  # and print the string.
 
-    page_text = extract_text_from_url(url)
-    
-    if page_text:
-        #print(page_text)
-        with open("output.txt", "w", encoding="utf-8") as output_file:
-            output_file.write(page_text)
+            page_text = extract_text_from_url(url)
+            
+            if page_text:
+                #print(page_text)
+                out_file_name = ''.join(e for e in page_text[:8] if e.isalnum()) + ".txt"
+                with open(out_file_name, "w", encoding="utf-8") as output_file:
+                    output_file.write(page_text)
