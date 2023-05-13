@@ -37,7 +37,7 @@ def extract_text_from_url(url):
             # Eliminate unwanted whitelines
             lines = [x.strip() for x in raw_text.split("\n") if x.strip()]
             final_text = "\n".join(lines)
-            print(my_string)
+            #print(my_string)
             #return final_text
             return my_string
 
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     with open ('websites.txt', 'rt') as myfile:  # Open lorem.txt for reading
         for myline in myfile:              # For each line, read to a string,
             url = myline.strip()
-            print("Here is the website: " + myline + "END OF WEB")                  # and print the string.
+            #print("Here is the website: " + myline + "END OF WEB")                  # and print the string.
 
             page_text = extract_text_from_url(url)
             
