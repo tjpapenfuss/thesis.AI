@@ -50,6 +50,8 @@ if __name__ == "__main__":
             
             if page_text:
                 #print(page_text)
+                # Remove all special characters to save a new txt file. page_text[:8] is
+                # the first 8 chars from the extracted URL text. 
                 out_file_name = ''.join(e for e in page_text[:8] if e.isalnum()) + ".txt"
                 with open(out_file_name, "w", encoding="utf-8") as output_file:
                     output_file.write(page_text)
