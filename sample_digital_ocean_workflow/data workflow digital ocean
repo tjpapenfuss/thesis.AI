@@ -1,0 +1,43 @@
+Data Collection           Data Storage              Data Processing          Data Analysis          Data Storage (Results)      Data Visualization
+    |                          |                           |                         |                             |                           |
+    +---> External APIs /      |                           |                         |                             |                           |
+    |     Databases            |                           |                         |                             |                           |
+    |                          |                           |                         |                             |                           |
+    +---> File Systems         |                           |                         |                             |                           |
+    |                          |                           |                         |                             |                           |
+    |                          +-------------------> Droplets /                  |                             |                           |
+    |                          |                     Spaces (Object Storage)       |                             |                           |
+    |                          |                           |                         |                             |                           |
+    +---> DigitalOcean Load    |                           |                         |                             |                           |
+          Balancers            |                           |                         |                             |                           |
+    |                          |                           |                         |                             |                           |
+    +---> DigitalOcean Block    |                           |                         |                             |                           |
+          Storage              |                           |                         |                             |                           |
+    |                          |                           |                         |                             |                           |
+    |                          +--------------------------------------------> Jupyter Notebooks /         |                           |
+    |                          |                                            Docker Containers /          |                           |
+    |                          |                                            Kubernetes Clusters          |                           |
+    |                          |                           |                         |                             |                           |
+    |                          +-----------------------------------------> Python Libraries /           |                           |
+    |                          |                                        Machine Learning Models /     |                           |
+    |                          |                                        Data Analysis Tools           |                           |
+    |                          |                           |                         |                             |                           |
+    |                          |                           |                         |                             |                           |
+    +---> DigitalOcean         |                           |                         |                             |                           |
+          Managed Databases    |                           |                         |                             |                           |
+    |                          |                           |                         |                             |                           |
+    +---> DigitalOcean Spaces  |                           |                         |                             |                           |
+          (Object Storage)     |                           |                         |                             |                           |
+    |                          |                           |                         |                             |                           |
+    |                          |                           |                         |                             |                           |
+    |                          |                           |                         |                             |                           |
+    +---> DigitalOcean         |                           |                         |                             |                           |
+          Kubernetes           |                           |                         |                             |                           |
+    |                          |                           |                         |                             |                           |
+    +---> DigitalOcean Block    |                           |                         |                             |                           |
+          Storage              |                           |                         |                             |                           |
+    |                          |                           |                         |                             |                           |
+    |                          |                           |                         |                             |                           |
+    +---> DigitalOcean         |                           |                         |                             |                           |
+          Droplets             |                           |                         |                             |                           |
+    |                          |                           |    
