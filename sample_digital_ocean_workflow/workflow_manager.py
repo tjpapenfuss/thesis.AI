@@ -1,9 +1,11 @@
-
-
 import spaces_upload
 import web_scrape 
+
 from config import OBJECT_STORAGE_KEY, OBJECT_STORAGE_SECRET, OBJECT_STORAGE_REGION, OBJECT_STORAGE_BUCKET
 from datetime import date
+import database
+import formata
+
 
 s3config = {
     "region_name": OBJECT_STORAGE_REGION,
@@ -19,7 +21,13 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
 
         # Step 1: Webpage Scraping
         page_text = web_scrape.extract_text_from_url(url)
-        
+        url_cleaned = formata.clean_page(url)
+        page_data = database.getpagedetails(url_cleaned)
+        if page_data:
+            page_data = page_data
+        else:
+            page_data = {'pid':'NOT FOUND/'+url_cleaned.replace("/","_"),'did':'domainid not found','orgid':'orgid not found'}
+
         if page_text:
             #print(page_text)
             # Remove all special characters to save a new txt file. page_text[:8] is
@@ -33,9 +41,12 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
 
             # Step 3: Storing Data in DigitalOcean Spaces
             object_name = out_file_name
+            object_name = str(page_data['pid'])
+            orgid = str(page_data['orgid'])
+            domainid = str(page_data['did'])
             today = str(date.today())
             #print(today)
-            metadata = {'URL': url, 'Ingestion_Date': today}
+            metadata = {'URL': url, 'Ingestion_Date': today,'URL_cleaned':url_cleaned,'orgid':orgid,'domainid':domainid}
             spaces_upload.upload_to_spaces(bucket_name, object_name, transformed_data, 
                 s3config["endpoint_url"], s3config["aws_access_key_id"], 
                 s3config["aws_secret_access_key"], metadata = metadata)
