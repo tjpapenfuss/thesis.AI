@@ -16,6 +16,6 @@ def upload_to_spaces(bucket_name, object_name, data, endpoint, access_key, secre
 # Data Transformation
 def transform_data(data):
     # Apply your business rules and logic for data transformation
-    transformed_data = data.upper()  # Example transformation: convert to uppercase
+    transformed_data = data.lower()  # Example transformation: convert to uppercase
     return transformed_data
 
