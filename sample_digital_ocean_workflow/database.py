@@ -44,4 +44,17 @@ def getkeywords():
         cursor.close()
         connection.close()
 
-
+def get100randomcasestudies():
+    try:
+        connection = db_connect()
+        cursor = connection.cursor()
+        connection.autocommit = True
+        sql = """select pageurl from pages, to_tsquery('english', 'case:* & stud:*') AS q where (pages.pagedescription is not NULL and tsv_pageurl @@ q) and pageurl not ilike '%443%' and language = 'en' order by random() limit 100"""
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        return([item[0] for item in result])
+    except (Exception) as error:
+        return(error)
+    finally:
+        cursor.close()
+        connection.close()
