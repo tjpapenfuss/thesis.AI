@@ -20,6 +20,8 @@ def get_collection(colname):
     #return collection from identified database
     return(database[colname])
 
+print(get_mongo_prod('Key_words'))
+
 def send_json_to_mongodb(json_data,orgid):
     # Parse JSON string to Python dictionary
     data = json.loads(json_data)
