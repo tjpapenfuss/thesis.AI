@@ -1,5 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
+import traceback
+
 
 def extract_text_from_url(url):
     try:
@@ -20,10 +22,16 @@ def extract_text_from_url(url):
             return my_string
 
         else:
-            print(f"An error occurred while fetching content from URL: {url}. Status code: {response.status_code}")
+            with open("error_log.txt", "a") as file:
+                file.write(f"An error occurred while fetching content from URL: {url}. Status code: {response.status_code}")
+                file.write("\n")
+                print(f"An error occurred while fetching content from URL: {url}. Status code: {response.status_code}")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
-        pass
+        with open("error_log.txt", "a") as file:
+            file.write(f"There was an error retrieving: {url}")
+            file.write("Here is the error:\n")
+            file.write(traceback.format_exc())
+            file.write("\n")
 
 # Webpage Scraping - simple
 def scrape_webpage(url):

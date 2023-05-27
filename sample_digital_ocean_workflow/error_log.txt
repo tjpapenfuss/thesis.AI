@@ -1,0 +1,368 @@
+An error occurred while fetching content from URL: https://bombora.com/sn/case-studies/. Status code: 403
+There was an error retrieving: https://swisslog.com/en-us/case-studies-and-resources/case-studies/2018/08/yusen-autostoreHere is the error:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 472, in connect
+    _match_hostname(cert, self.assert_hostname or server_hostname)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 545, in _match_hostname
+    match_hostname(cert, asserted_hostname)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/ssl_match_hostname.py", line 150, in match_hostname
+    raise CertificateError(
+urllib3.util.ssl_match_hostname.CertificateError: hostname 'swisslog.com' doesn't match either of 'www.kuka.com', 'cdn.kuka.com', 'www.kuka-ag.de', 'www.kuka-entertainment.com', 'www.kuka-healthcare.com', 'www.kuka-industries.com', 'www.kuka-robotics.com', 'www.kuka-systems.com', 'kuka.com', 'kuka-ag.de', 'kuka-entertainment.com', 'kuka-healthcare.com', 'kuka-industries.com', 'kuka-robotics.com', 'kuka-systems.com'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='swisslog.com', port=443): Max retries exceeded with url: /en-us/case-studies-and-resources/case-studies/2018/08/yusen-autostore (Caused by SSLError(CertificateError("hostname 'swisslog.com' doesn't match either of 'www.kuka.com', 'cdn.kuka.com', 'www.kuka-ag.de', 'www.kuka-entertainment.com', 'www.kuka-healthcare.com', 'www.kuka-industries.com', 'www.kuka-robotics.com', 'www.kuka-systems.com', 'kuka.com', 'kuka-ag.de', 'kuka-entertainment.com', 'kuka-healthcare.com', 'kuka-industries.com', 'kuka-robotics.com', 'kuka-systems.com'")))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tannerpapenfuss/thesis.AI/sample_digital_ocean_workflow/web_scrape.py", line 9, in extract_text_from_url
+    response = requests.get(url)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='swisslog.com', port=443): Max retries exceeded with url: /en-us/case-studies-and-resources/case-studies/2018/08/yusen-autostore (Caused by SSLError(CertificateError("hostname 'swisslog.com' doesn't match either of 'www.kuka.com', 'cdn.kuka.com', 'www.kuka-ag.de', 'www.kuka-entertainment.com', 'www.kuka-healthcare.com', 'www.kuka-industries.com', 'www.kuka-robotics.com', 'www.kuka-systems.com', 'kuka.com', 'kuka-ag.de', 'kuka-entertainment.com', 'kuka-healthcare.com', 'kuka-industries.com', 'kuka-robotics.com', 'kuka-systems.com'")))
+
+There was an error retrieving: https://swisslog.com/en-us/case-studies-and-resources/case-studiesHere is the error:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 472, in connect
+    _match_hostname(cert, self.assert_hostname or server_hostname)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 545, in _match_hostname
+    match_hostname(cert, asserted_hostname)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/ssl_match_hostname.py", line 150, in match_hostname
+    raise CertificateError(
+urllib3.util.ssl_match_hostname.CertificateError: hostname 'swisslog.com' doesn't match either of 'www.kuka.com', 'cdn.kuka.com', 'www.kuka-ag.de', 'www.kuka-entertainment.com', 'www.kuka-healthcare.com', 'www.kuka-industries.com', 'www.kuka-robotics.com', 'www.kuka-systems.com', 'kuka.com', 'kuka-ag.de', 'kuka-entertainment.com', 'kuka-healthcare.com', 'kuka-industries.com', 'kuka-robotics.com', 'kuka-systems.com'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='swisslog.com', port=443): Max retries exceeded with url: /en-us/case-studies-and-resources/case-studies (Caused by SSLError(CertificateError("hostname 'swisslog.com' doesn't match either of 'www.kuka.com', 'cdn.kuka.com', 'www.kuka-ag.de', 'www.kuka-entertainment.com', 'www.kuka-healthcare.com', 'www.kuka-industries.com', 'www.kuka-robotics.com', 'www.kuka-systems.com', 'kuka.com', 'kuka-ag.de', 'kuka-entertainment.com', 'kuka-healthcare.com', 'kuka-industries.com', 'kuka-robotics.com', 'kuka-systems.com'")))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tannerpapenfuss/thesis.AI/sample_digital_ocean_workflow/web_scrape.py", line 9, in extract_text_from_url
+    response = requests.get(url)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='swisslog.com', port=443): Max retries exceeded with url: /en-us/case-studies-and-resources/case-studies (Caused by SSLError(CertificateError("hostname 'swisslog.com' doesn't match either of 'www.kuka.com', 'cdn.kuka.com', 'www.kuka-ag.de', 'www.kuka-entertainment.com', 'www.kuka-healthcare.com', 'www.kuka-industries.com', 'www.kuka-robotics.com', 'www.kuka-systems.com', 'kuka.com', 'kuka-ag.de', 'kuka-entertainment.com', 'kuka-healthcare.com', 'kuka-industries.com', 'kuka-robotics.com', 'kuka-systems.com'")))
+
+An error occurred while fetching content from URL: https://touchbistro.com/blog/chicago-dog-case-study/. Status code: 403
+There was an error retrieving: https://swisslog.com/fi-fi/case-studies-ja-white-papers/blog/ready-to-move-forward-with-e-grocery-automationHere is the error:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 472, in connect
+    _match_hostname(cert, self.assert_hostname or server_hostname)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 545, in _match_hostname
+    match_hostname(cert, asserted_hostname)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/ssl_match_hostname.py", line 150, in match_hostname
+    raise CertificateError(
+urllib3.util.ssl_match_hostname.CertificateError: hostname 'swisslog.com' doesn't match either of 'www.kuka.com', 'cdn.kuka.com', 'www.kuka-ag.de', 'www.kuka-entertainment.com', 'www.kuka-healthcare.com', 'www.kuka-industries.com', 'www.kuka-robotics.com', 'www.kuka-systems.com', 'kuka.com', 'kuka-ag.de', 'kuka-entertainment.com', 'kuka-healthcare.com', 'kuka-industries.com', 'kuka-robotics.com', 'kuka-systems.com'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='swisslog.com', port=443): Max retries exceeded with url: /fi-fi/case-studies-ja-white-papers/blog/ready-to-move-forward-with-e-grocery-automation (Caused by SSLError(CertificateError("hostname 'swisslog.com' doesn't match either of 'www.kuka.com', 'cdn.kuka.com', 'www.kuka-ag.de', 'www.kuka-entertainment.com', 'www.kuka-healthcare.com', 'www.kuka-industries.com', 'www.kuka-robotics.com', 'www.kuka-systems.com', 'kuka.com', 'kuka-ag.de', 'kuka-entertainment.com', 'kuka-healthcare.com', 'kuka-industries.com', 'kuka-robotics.com', 'kuka-systems.com'")))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tannerpapenfuss/thesis.AI/sample_digital_ocean_workflow/web_scrape.py", line 9, in extract_text_from_url
+    response = requests.get(url)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='swisslog.com', port=443): Max retries exceeded with url: /fi-fi/case-studies-ja-white-papers/blog/ready-to-move-forward-with-e-grocery-automation (Caused by SSLError(CertificateError("hostname 'swisslog.com' doesn't match either of 'www.kuka.com', 'cdn.kuka.com', 'www.kuka-ag.de', 'www.kuka-entertainment.com', 'www.kuka-healthcare.com', 'www.kuka-industries.com', 'www.kuka-robotics.com', 'www.kuka-systems.com', 'kuka.com', 'kuka-ag.de', 'kuka-entertainment.com', 'kuka-healthcare.com', 'kuka-industries.com', 'kuka-robotics.com', 'kuka-systems.com'")))
+
+An error occurred while fetching content from URL: https://perfectsearchmedia.com/case-studies/seo-case-studies/software-company. Status code: 403
+An error occurred while fetching content from URL: https://scaledagile.com/case_study/intel/. Status code: 403
+There was an error retrieving: https://wwt.com/case-study/iot-solution-sets-manufacturer-for-large-scale-cost-savings-and-productivity-gainsHere is the error:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/Cellar/python@3.10/3.10.7/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x10a4452d0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='wwt.com', port=443): Max retries exceeded with url: /case-study/iot-solution-sets-manufacturer-for-large-scale-cost-savings-and-productivity-gains (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10a4452d0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tannerpapenfuss/thesis.AI/sample_digital_ocean_workflow/web_scrape.py", line 9, in extract_text_from_url
+    response = requests.get(url)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='wwt.com', port=443): Max retries exceeded with url: /case-study/iot-solution-sets-manufacturer-for-large-scale-cost-savings-and-productivity-gains (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10a4452d0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+An error occurred while fetching content from URL: https://replicon.com/case-study/xoomworks/. Status code: 403
+An error occurred while fetching content from URL: https://cloudflare.com/zh-tw/case-studies/shoppingcartelite/. Status code: 404
+An error occurred while fetching content from URL: https://extremenetworks.com/resources/case-study/extreme-wlan-gives-healthcare-provider-edge-in-patient-care/. Status code: 403
+An error occurred while fetching content from URL: https://marketing.longdriveagency.com/facebook-lead-generation-case-study1. Status code: 403
+There was an error retrieving: https://octanner.com/case-studies/roto-rooter.htmlHere is the error:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/Cellar/python@3.10/3.10.7/Frameworks/Python.framework/Versions/3.10/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/Cellar/python@3.10/3.10.7/Frameworks/Python.framework/Versions/3.10/lib/python3.10/ssl.py", line 1071, in _create
+    self.do_handshake()
+  File "/usr/local/Cellar/python@3.10/3.10.7/Frameworks/Python.framework/Versions/3.10/lib/python3.10/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:997)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='octanner.com', port=443): Max retries exceeded with url: /case-studies/roto-rooter.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:997)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tannerpapenfuss/thesis.AI/sample_digital_ocean_workflow/web_scrape.py", line 9, in extract_text_from_url
+    response = requests.get(url)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='octanner.com', port=443): Max retries exceeded with url: /case-studies/roto-rooter.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:997)')))
+
+An error occurred while fetching content from URL: https://dailypay.com/resource-center/case-studies/switching-flexible-on-demand-pay-engaging-employee-experience-wendys-fast-food-workers/. Status code: 403
+An error occurred while fetching content from URL: https://fr.sysdig.com/resources/case-studies/5-companies-using-prometheus-and-sysdig/. Status code: 403
+An error occurred while fetching content from URL: https://rechargepayments.com/case-studies/litjoy-increased-orders-per-customer-with-a-portal/. Status code: 403
+An error occurred while fetching content from URL: https://paycor.com/resource-center/case-studies/fontbonne-university/. Status code: 403
+An error occurred while fetching content from URL: https://beekeeper.io/case-study/dominos-pizza/. Status code: 403
+An error occurred while fetching content from URL: https://magic.agency/case-studies/. Status code: 403
+An error occurred while fetching content from URL: https://hallaminternet.com/case-studies/orgvue/. Status code: 403
+An error occurred while fetching content from URL: https://bombora.com/tr/case-studies/. Status code: 403
+An error occurred while fetching content from URL: https://logicalposition.com/case-studies/texas-belting-supply. Status code: 403
+An error occurred while fetching content from URL: https://parakeeto.com/blog/case-study-3-years-of-working-with-parakeeto-part-2-episode-80/page/21/. Status code: 403
+There was an error retrieving: https://marketing-mojo.com/case-studies/marketing-mojo-generates-more-qualified-leads-for-scottmadden-with-conversion-rates-as-high-as-35/Here is the error:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/Cellar/python@3.10/3.10.7/Frameworks/Python.framework/Versions/3.10/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/Cellar/python@3.10/3.10.7/Frameworks/Python.framework/Versions/3.10/lib/python3.10/ssl.py", line 1071, in _create
+    self.do_handshake()
+  File "/usr/local/Cellar/python@3.10/3.10.7/Frameworks/Python.framework/Versions/3.10/lib/python3.10/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:997)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='marketing-mojo.com', port=443): Max retries exceeded with url: /case-studies/marketing-mojo-generates-more-qualified-leads-for-scottmadden-with-conversion-rates-as-high-as-35/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:997)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tannerpapenfuss/thesis.AI/sample_digital_ocean_workflow/web_scrape.py", line 9, in extract_text_from_url
+    response = requests.get(url)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='marketing-mojo.com', port=443): Max retries exceeded with url: /case-studies/marketing-mojo-generates-more-qualified-leads-for-scottmadden-with-conversion-rates-as-high-as-35/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:997)')))
+
+An error occurred while fetching content from URL: https://solvixsolutions.com/bohn-jsell-case-study/. Status code: 400
+An error occurred while fetching content from URL: https://pro.harman.com/case_studies/royal-academy-of-music-london. Status code: 403
+An error occurred while fetching content from URL: https://bombora.com/tr/case-studies/ibm/. Status code: 403
+An error occurred while fetching content from URL: https://stage.synoptek.com/insights/case-studies/synopteks-it-service-management-assessment-helps-a-clinical-diagnostic-laboratory-streamline-its-end-to-end-it-service-management-process/. Status code: 302
+There was an error retrieving: https://arubanetworks.com/it/resources/case-studies/matrix/Here is the error:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/Cellar/python@3.10/3.10.7/Frameworks/Python.framework/Versions/3.10/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/local/Cellar/python@3.10/3.10.7/Frameworks/Python.framework/Versions/3.10/lib/python3.10/ssl.py", line 1071, in _create
+    self.do_handshake()
+  File "/usr/local/Cellar/python@3.10/3.10.7/Frameworks/Python.framework/Versions/3.10/lib/python3.10/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='arubanetworks.com', port=443): Max retries exceeded with url: /it/resources/case-studies/matrix/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/tannerpapenfuss/thesis.AI/sample_digital_ocean_workflow/web_scrape.py", line 9, in extract_text_from_url
+    response = requests.get(url)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='arubanetworks.com', port=443): Max retries exceeded with url: /it/resources/case-studies/matrix/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)')))
+
+An error occurred while fetching content from URL: https://alertlogic.com/customers/case-studies/gsi-commerce/. Status code: 403
+An error occurred while fetching content from URL: https://dimensiondata.com/en-gb/about-us/case-studies/siriraj-hospital. Status code: 403
+An error occurred while fetching content from URL: https://titangrowth.com/case-studies/eagle-eye-power-solutions/. Status code: 403
+An error occurred while fetching content from URL: https://decode.agency/case-study/gdi/. Status code: 403
+An error occurred while fetching content from URL: https://royalcyber.com/resources/case-studies/hd-supply/. Status code: 403
+An error occurred while fetching content from URL: https://bombora.com/jv/case-studies/onelogin/. Status code: 403
+An error occurred while fetching content from URL: https://neoreach.com/case-studies/fanduel/. Status code: 403
+An error occurred while fetching content from URL: https://dimensiondata.com/en-us/about-us/case-studies/cbus. Status code: 403
+An error occurred while fetching content from URL: https://freshworks.com/crm/resources/case-study/tkf-telecom-france/. Status code: 403
+An error occurred while fetching content from URL: https://pro.harman.com/case_studies/cgv-yongsan-multiplex-south-korea. Status code: 403
+An error occurred while fetching content from URL: https://netelixir.com/case_study/century-21/. Status code: 403
