@@ -29,11 +29,24 @@ def send_json_to_mongodb(json_data,orgid):
     # Access the desired collection within the database
     collection = get_collection(orgid)
 
+
+    # Check if the record exists in the collection
+    existing_record = collection.find_one({"PID": data["PID"]})
+
+    if existing_record:
+        # Record already exists, perform update/overwrite
+        result = collection.replace_one({"PID": data["PID"]}, data)
+        print("Record updated:", existing_record["_id"])
+    else:
+        # Record doesn't exist, perform insert
+        result = collection.insert_one(data)
+        print("Record created:", result.inserted_id)
+
     # Insert the JSON data into the collection
-    result = collection.insert_one(data)
+    # result = collection.insert_one(data)
 
     # Print the inserted document's ID
-    print("Inserted document ID:", result.inserted_id)
+    # print("Inserted document ID:", result.inserted_id)
 
 # Example usage
 #json_data = '{"name": "John", "age": 30,"orgid":"1234"}'

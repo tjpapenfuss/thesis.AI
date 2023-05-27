@@ -23,6 +23,7 @@ def extract_text_from_url(url):
             print(f"An error occurred while fetching content from URL: {url}. Status code: {response.status_code}")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
+        pass
 
 # Webpage Scraping - simple
 def scrape_webpage(url):

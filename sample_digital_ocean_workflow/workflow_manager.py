@@ -38,8 +38,6 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
             #print(page_text)
             # Remove all special characters to save a new txt file. page_text[:8] is
             # the first 8 chars from the extracted URL text. 
-            keyword_JSON = key_word_matcher.count_keywords(page_text, keywords)
-            json_output = json.dumps(keyword_JSON, indent=4)
             out_file_name = ''.join(e for e in page_text[:8] if e.isalnum()) + ".txt"
             #with open(out_file_name, "w", encoding="utf-8") as output_file:
                 #output_file.write(page_text)
@@ -53,6 +51,15 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
             orgid = str(page_data['orgid'])
             domainid = str(page_data['did'])
             today = str(date.today())
+
+            # Step 4: Get the keywords in the Website. Add in pid, orgid, and did. 
+            keyword_JSON = key_word_matcher.count_keywords(page_text, keywords)
+            keyword_JSON['URL']=url #Adding the URL to the JSON output
+            keyword_JSON['PID']=object_name #Adding the PID to the output
+            keyword_JSON['orgid']=orgid #Adding the Organization ID to the output
+            keyword_JSON['did']=domainid #Adding the Domain ID to the output
+            json_output = json.dumps(keyword_JSON, indent=4)
+
             #print(today)
             metadata = {'URL': url, 'Ingestion_Date': today,'URL_cleaned':url_cleaned,'orgid':orgid,'domainid':domainid}
             spaces_upload.upload_to_spaces(bucket_name, object_name, transformed_data, 
