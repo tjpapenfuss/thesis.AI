@@ -1,5 +1,6 @@
 import spaces_upload
 import web_scrape 
+import mongo_db_connector
 import json
 
 from config import OBJECT_STORAGE_KEY, OBJECT_STORAGE_SECRET, OBJECT_STORAGE_REGION, OBJECT_STORAGE_BUCKET
@@ -58,7 +59,8 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
                 s3config["endpoint_url"], s3config["aws_access_key_id"], 
                 s3config["aws_secret_access_key"], metadata = metadata)
             print("Webpage " + url + "\nhas been successfully writen to file: " + out_file_name)
-            print(keyword_JSON)
+            send_json_to_mongodb(json_data=keyword_json,orgid=orgid)
+            print("mongo file upload done")
 
 
             # # Step 4: Storing Transformed Data in DigitalOcean Spaces

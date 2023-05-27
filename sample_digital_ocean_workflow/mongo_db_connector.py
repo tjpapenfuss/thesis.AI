@@ -15,17 +15,17 @@ def get_mongo_prod(name):
 
 def get_collection(colname):
     #get database from document storage
-    database = get_mongo_prod('datalake')
+    database = get_mongo_prod('Key_words')
     
     #return collection from identified database
     return(database[colname])
 
-def send_json_to_mongodb(json_data):
+def send_json_to_mongodb(json_data,orgid):
     # Parse JSON string to Python dictionary
     data = json.loads(json_data)
 
     # Access the desired collection within the database
-    collection = get_collection(data['orgid'])
+    collection = get_collection(orgid)
 
     # Insert the JSON data into the collection
     result = collection.insert_one(data)
@@ -35,7 +35,7 @@ def send_json_to_mongodb(json_data):
 
 # Example usage
 #json_data = '{"name": "John", "age": 30,"orgid":"1234"}'
-#send_json_to_mongodb(json_data)
+#send_json_to_mongodb(json_data,orgid)
 
 
 def get_mongodb_contents():
