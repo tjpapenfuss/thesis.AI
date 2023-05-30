@@ -17,7 +17,7 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
             #print(page_text)
             # Remove all special characters to save a new txt file. page_text[:8] is
             # the first 8 chars from the extracted URL text. 
-            out_file_name = ''.join(e for e in url[-20:] if e.isalnum()) + ".txt"
+            out_file_name = ''.join(e for e in url[-30:] if e.isalnum()) + ".txt"
             save_path = 'files_to_index/'
             completeName = os.path.join(save_path, out_file_name)         
             file1 = open(completeName, "w")
