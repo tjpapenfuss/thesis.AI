@@ -3,6 +3,7 @@ from langchain.chat_models import ChatOpenAI
 import gradio as gr
 import sys
 import os
+import time
 
 import config
 
@@ -36,5 +37,11 @@ iface = gr.Interface(fn=chatbot,
                      outputs="text",
                      title="Custom-trained AI Chatbot")
 
+start_time = time.time()
 index = construct_index("files_to_index")
+end_time = time.time()
+
+execution_time = end_time - start_time
+print("The index took {} seconds to create.".format(execution_time))
+
 iface.launch(share=True)
