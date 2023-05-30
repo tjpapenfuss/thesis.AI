@@ -1,0 +1,28 @@
+
+Leveraging the Power of Lead Validation
+Home»Customer Success Stories»Leveraging the Power of Lead Validation
+Leads are important for most companies. For some, they are critical. But for one of our customers, leads are their business: they provide their clients with primed leads that help generate billions of dollars of revenue, which involves mission-critical data quality needs for accurate leads that convert. While we are keeping their name private, their Chief Technology Officer was kind enough to sit down with us and discuss how they have used Service Objects’DOTS Lead Validationin their business.
+Selling leads is our business, so the ability to tell a person they are inputting invalid or incorrect data – in real-time – is what keeps the quality of our leads so high. We trust Service Objects’ Lead Validation API to be a central part of our lead capture process and perform a mission-critical role.
+A unique pay-for-performance business model
+This company occupies a premium niche in their market: they closely curate the businesses they will work with, and then help these companies with consumer education and information portals containing contact and lead forms. According to their CTO, their mission is to provide great value, and they choose clients based on whether they would refer their families and friends to them.
+They are selective about clients for a reason: their unique pricing model is performance-based rather than contract-based, and their customers only pay for leads they use. This means that they pay out of its own pocket to get traffic to these sites and takes on the risk of campaigns working: no leads, no revenue. They employ sophisticated in-house technology, ranging from portal tools to neural networks, to ensure that these leads are the best fit possible for their customers.
+An integrated lead validation model
+This company put Service Objects’ Lead Validation at the center of their lead capture process. An important part of their overall technological solution, they integrated the Lead Validation API into the contact data entry process to verify that all US and Canadian leads were genuine, accurate and up-to-date.
+In general, Lead Validation cross-validates key contact record components and analyzes over 130 data points, to correct and append contact records while returning a comprehensive validation score of 0-100. For this firm, Lead Validation represented a great first line of defense for eliminating bad leads in real-time, by popping up errors in their forms when bogus information is input in certain fields.
+Because of this firm’s pay-for-performance model, as well as their commitment to providing high quality leads to their customers, maintaining a very low return rate on leads was key to profitability. Ensuring the correct phone number is provided was of particular importance, since this is a primary way that many of their clients follow up quickly and personally with potential customers. According to the CTO, integrating the Lead Validation API significantly reduced their previous rate of 10-15% invalid leads, in some cases to zero.
+Three key factors:speed, reliability and ease of use
+For any business today, service speed and reliability are not only essential but function as a competitive differentiator. As this firm’s CTO put it, “we live and die by milliseconds, and the ability to tell a person in real-time they are inputting invalid data is what keeps the quality of our leads so high. We never experienced a latency issue with Service Objects – ever – and it has always been very fast and reliable.”
+Given the firm’s sophisticated technology, ease of use and ease of implementation were also key factors in their relationship with Service Objects. Their CTO noted that their API integration of Lead Validation was very simple compared to other API’s he had used, and that its documentation made it possible for them to get up-and-running very quickly.
+The CTO summed up his feelings by saying, “I am so confident in Service Objects’ Lead Validation service that I refer it to other colleagues who are looking for a tool to improve their lead generation efforts.”
+PRODUCTSAddress ValidationAddress CompleteChange of AddressAddress DetectiveAddress InsightLead ValidationName ValidationPhone InsightAddress GeocodeEmail ValidationFastTaxIP Validation
+CONTACT
+136 West Canon Perdido St, Ste DSanta Barbara, CA, 93101-82071-805-963-17001-800-694-6269support@serviceobjects.com
+Site Map|Privacy Policy|Terms of Use
+PRODUCTSAddress ValidationAddress CompleteChange of AddressAddress DetectiveAddress InsightLead ValidationName ValidationPhone InsightAddress GeocodeEmail ValidationFastTaxIP Validation
+CONTACT
+136 West Canon Perdido St, Ste DSanta Barbara, CA, 93101-82071-805-963-17001-800-694-6269support@serviceobjects.com
+Site Map|Privacy Policy|Terms of Use
+Cookies Policy
+General Use
+Third Parties
+Thanks, I understand.

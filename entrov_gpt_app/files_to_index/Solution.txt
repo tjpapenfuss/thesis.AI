@@ -1,0 +1,154 @@
+Solutions
+By need
+Connect users to enterprise resources with identity-based security controls.
+Combine security with performance to ensure you are protected without compromising user experiences.
+Secure any user accessing any application, on any device, in any location.
+Network security, performance, & reliability on a global scale.
+Build powerful applications on our global network with our Developer Platform.
+By industry
+For online stores or services
+For academic institutions
+For financial services
+For gaming services or platforms
+For medical institutions or services
+For media services
+For philanthropic organizations
+For government organizations
+For software services
+Public interest
+For vulnerable organizations
+For humanitarian organizations
+For government institutions
+For vaccine access organizations
+For political organizations
+Need help choosing?
+Products
+Our products
+For your employees
+Integrate WAN and Zero Trust security natively for secure, performant hybrid work.
+Secure access and threat defense for Internet, SaaS, and self-hosted apps with ZTNA, CASB, SWG, cloud email security & more.
+Modernize your network with DDoS protection, WAN and firewall as a service.
+For websites and applications
+Protect & accelerate mobile / web apps, APIs & websites with WAF, DDoS, CDN, DNS & more.
+For developers
+Build and deploy serverless applications with scale, performance, security, and reliability.
+Consumer services
+Fast & private way to browse the internet
+Register or transfer a domain
+Need help choosing?
+Pricing
+Our plans & pricing
+ZTNA, CASB, SWG, RBI, email security, & more
+DDoS, WAF, CDN, DNS, load balancing, & more
+WAN, FWaaS and DDoS protection
+Build & deploy serverless code
+Enterprise plan
+Compare all plans
+Need help choosing?
+Resources
+Documentation
+Getting Started
+Application Security
+Application Services
+Zero Trust Services
+Network Services
+Insights
+Developer Platform
+API
+Resource hub
+Explore white papers, reports, & more
+Learn how we've helped others
+Explore industry analysis of our products
+Explore our product documentation
+Explore past & upcoming webinars
+Learning
+Explore our resources on cybersecurity & the Internet
+Learn the difference between good & bad bots
+Learn how the cloud works & explore benefits
+Learn how CDN works & explore benefits
+Learn about DDoS attacks & mitigation
+Learn about DNS & how it works
+Learn about email security & common attacks
+Learn about network layer & how it works
+Learn about performance & why it matters
+Learn about core security concepts & common vulnerabilities
+Learn about serverless computing & explore benefits
+Learn about SSL, TLS, & understanding certificates
+Learn about Zero Trust security model & implementation
+Trends & insights
+Explore the latest news in cybersecurity
+Up to date Internet trends & insights
+Insights for the digital enterprise
+Blog
+Community forum
+Dev documentation hub
+Get help
+Partners
+Channel & alliance partners
+Learn about the types of partners available in our network
+Looking for a Cloudflare partner? We can connect you
+Partners that support organizations of all sizes adopting our Zero Trust solutions
+Partners with deep expertise in SASE & Zero Trust services
+Interested in joining our Partner Network? Apply today to get started
+Get started as a partner by selling & supporting Cloudflare's self-serve plans
+Technology partners
+Apply to become a technology partner to facilitate & drive our innovative technologies
+Use insights to tune Cloudflare & provide the best experience for your end users
+We partner with an alliance of providers committed to reducing data transfer fees
+We partner with leading cyber insurers & incident response providers to reduce cyber risk
+We work with partners to provide network, storage, & power for faster, safer delivery
+Integrate device posture signals from endpoint security programs
+Get frictionless authentication across provider types with our identity partnerships
+Extend your network to Cloudflare over secure, high-performing links
+Secure endpoints for your remote workforce by deploying our client with your MDM vendors
+Enhance on-demand DDoS protection with unified network-layer security & observability
+Connect to Cloudflare using your existing WAN or SD-WAN infrastructure
+Peering portal
+Partner network
+Why Cloudflare
+Why choose Cloudflare
+Learn about Cloudflare
+Learn what makes us different
+Learn about our growing network
+Explore our innovative technologies
+Learn what makes us trustworthy
+Comparisons
+See how our services compare
+See how our services compare
+Why trust Cloudflare
+Learn how we've helped others
+Explore our product documentation
+Explore industry analysis of our products
+Explore past & upcoming webinars
+Explore our trust & safety resources
+Explore our legal resources
+Resource hub
+Explore white papers, reports, & more
+Learn how we've helped others
+Explore industry analysis of our products
+Explore our product documentation
+Explore past & upcoming webinars
+Blog
+Enterprise level services
+Explore case studies
+Sign Up
+Under Attack?
+Log In
+Support
+Utility Nav - Sign Up
+Log In
+World University Service of Canada
+World University Service of Canada is a Canadian international development nonprofit working with a diverse network of students, volunteers, schools, governments, and businesses. WUSC’s youth-centered solutions look to improve education, economics, and create opportunities to overcome inequality and exclusion in over 25 countries across Asia, Africa, and the Americas.
+One of their flagship initiatives is the Student Refugee Program, which has been operating in Canada since 1978. “Through this program, we work with the Canadian post-secondary community to provide access to resettlement and higher education for young refugees," says Ken Fraser, the Deputy Director of IT and Digital Transformation at the organization. "Since 1978, our network has resettled more than 2,000 refugee youth to Canada where they are able to build a better future for themselves and their families.”
+Fraser wears many hats at WUSC, leading a small team of five people who provide IT services and support for staff around the world.
+Due to the COVID-19 pandemic, the organization unfortunately had to delay many refugee resettlements and shifted international volunteering opportunities to e-volunteering opportunities. The pandemic opened a new world of public engagement as planned in-person events moved online, allowing the organization to open up a global conversation and reach new audiences.
+As a non-profit organization that supports volunteers around the world, reliability and security for their external website and internal web applications was essential to keep them online and helping others. WUSC joined Project Galileo in June 2019 while Fraser was looking for a new DNS provider focused on security for the modern web. “A big challenge we had previously was that our security tools only protected internally hosted applications. For any sites we hosted with an external provider there were no monitoring or security tools available, aside from whatever the service provided,” Fraser says. “This has all changed now with Cloudflare. Any site that we proxy through the Cloudflare network has the same reporting, performance and security features such as the web application firewall available whether internally or externally hosted.”
+For internal applications, WUSC uses Cloudflare Access to keep their team in Canada and abroad secure when accessing the organization's internal applications. With Access, Fraser and his team can monitor and enforce rules to ensure that unauthorized attempts to access their Wordpress login pages stop at Cloudflare’s network first. As Fraser explains, “Cloudflare Access has been an integral part of securing our sites, and even more so now that we’re all working from home. For example, all of our sites using WordPress are protected with a Cloudflare Access policy in order to prevent anyone on the Internet from getting to the login page, and only specific email addresses added to the policy can get through. It was very simple to set up within Cloudflare and had an immediate benefit to the security posture of our sites.”
+“Cloudflare Access has been an integral part of securing our sites, and even more so now that we’re all working from home. It was very simple to set up within Cloudflare and had an immediate benefit to the security posture of our sites.”
+Ken FraserDeputy Director of IT and Digital Transformation
+Sales
+Getting Started
+Community
+Developers
+Support
+Company

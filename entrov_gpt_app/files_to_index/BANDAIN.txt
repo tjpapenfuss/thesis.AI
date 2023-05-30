@@ -1,0 +1,32 @@
+BANDAI NAMCO Entertainment
+BANDAI NAMCO Entertainment
+Background:
+BANDAI NAMCO Entertainment is, at its core, an entertainment company. For decades, both Bandai and Namco have been at the forefront of visual entertainment, primarily in the video game industry. From NAMCO’s classics like Pacman and Tekken to Bandai’s mastery of the animation industry with shows like Dragon Ball Z, the two are responsible for a vast swath of entertainment that has found its way into millions of homes across the globe. In 2005, the two recognized an opportunity to be even more impactful and merged to become BANDAI NAMCO Entertainment. Building on the creative legacies of both companies, the BANDAI NAMCO of today continues to meet the ever-growing hunger for video game entertainment in new and innovative ways.
+Challenge:
+BANDAI NAMCO is no stranger to data. An organization of their size produces a harrowing amount of data via games, users and social networks. In fact, the size of their data was their biggest challenge; they were producing more data than they could consume. Such volume made it exceedingly difficult for various groups to pinpoint and utilize the data most relevant to them.
+To help cut through the noise and get users of all backgrounds interacting with their data more effectively, they knew they needed a better analysis tool. They needed something powerful enough for robust data discovery but intuitive enough that anyone could use – something that could help them to create a more data-driven culture with fewer barriers to entry. They immediately recognized Tableau’s unique disposition as just such a tool, so they made the leap and acquired it for their North American division, BANDAI NAMCO Games America (BNGA).
+Of course, they realized that simply putting Tableau into the hands of their analysts wouldn’t magically spawn the data-driven culture they envisioned. First, they needed a framework for success. Once that was identified, they needed a spark to set everything in motion. To help them with these tasks, they leaned on InterWorks’ expertise.
+Solution:
+To build a solid foundation among BNGA’s Tableau user base, InterWorks proposed custom Tableau training largely centered on material from“Tableau Your Data!”byDan Murray. This best practices guidebook would serve as excellent course material, considering it focuses largely on fostering Tableau user adoption at the enterprise level. Once that training was complete, InterWorks could provide additional guidance to individual groups to help them become more comfortable with Tableau.
+But before learning the X’s and O’s of Tableau, BNGA first wanted to see Tableau’s full potential realized in the form of sharp visualizations using their own data. Since they were fairly new to Tableau, they asked InterWorks to create some ad hoc visualizations for them. This work would be the initial spark they needed to showcase Tableau’s capabilities to their user base.
+Results:
+The ad hoc visualizations created by InterWorks were a taste of immediate success for BNGA. Not only did they provide rapid insight into their data, but they also served as an excellent example of what Tableau is capable of creating. In essence, these visualizations would become the standard for their fledgling Tableau user base to pursue when creating visualizations on their own.
+The custom Tableau training provided by InterWorks dovetailed nicely with the ad hoc consulting. Obviously, BNGA users learned how to apply Tableau effectively to their specific use cases, but their training extended far beyond fundamental knowledge.
+During training, a large emphasis was placed on empowerment and creating a sense of ownership among Tableau users. BNGA wanted as many people as possible to see that jumping into Tableau to perform analysis was simple and hassle free. This required a shift in how their IT department and business users interacted with one another, which InterWorks helped to facilitate. By making data more readily available and educating their user base on how to be self-sufficient report creators in Tableau, BNGA discovered that their business users can go from ideation to creation almost instantly. This empowerment also allows their IT department to focus their energies elsewhere, taking on more of a support role than a burdensome management role.
+For BANDAI NAMCO as a whole, the steps taken by BNGA and InterWorks to foster a truly data-driven culture with Tableau at its heart has already paid dividends. With insight now only a few clicks away, they can ensure that they make sound decisions rooted in data instead of gut instinct. Such decisions will help them connect to their passionate customers like never before, ensuring their unique brand of entertainment remains strong for years to come.
+Photo byMichael Ocampo. Used underCC 2.0.
+Company Information
+Tax Information
+Sales tax will be added to invoices for shipments into Alabama, Arizona, Arkansas, California, Colorado, Connecticut, DC, Florida, Georgia, Hawaii, Illinois, Indiana, Iowa, Kansas, Louisiana, Maryland,
+Massachusetts, Michigan, Minnesota, Missouri, Nebraska, Nevada, New Jersey, New York, North
+Carolina, Ohio, Oklahoma, Pennsylvania, Rhode Island, South Carolina, Tennessee, Texas, Utah, Virginia, Washington, West Virginia, Wisconsin and Wyoming unless customer is either a reseller or sales tax exempt.  Please submit exemption forms toaccounting@interworks.comfor review.
+Partners or Corporate Officers
+Trade References
+Payment Options
+Terms
+Δ
+InterWorks uses cookies to allow us to better understand how the site is used. By continuing to use this site, you consent to this policy.Review PolicyOK
+Interworks GmbHRatinger Straße 940213 DüsseldorfGermanyGeschäftsführer: Mel Stephenson
+Kontaktaufnahme:markus@interworks.euTelefon: +49 (0)211 5408 5301
+Amtsgericht Düsseldorf HRB 79752UstldNr: DE 313 353 072
+Want to know what's next in analytics?- Join our next webinar on June 1 to find out!Register Now

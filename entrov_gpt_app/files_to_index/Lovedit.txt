@@ -1,0 +1,64 @@
+Loved it! Get this in your inbox.
+Please enter your work email
+Yes, I’d like to receive the latest news and other communications from CleverTap. You can unsubscribe anytime. For more details, go to thePrivacy Policy.
+By submitting this form, you agree to CleverTap’sPrivacy Policy
+Enjoy your Case Study!
+In case you don’t get it in your inbox in the next 5 minutes, please check your ‘Promotions’ folder.
+Analytics & InsightsReal-time analytics to uncover user trends and track behaviors
+Automated User SegmentationCreate actionable segments with ease and perfect your targeting
+Omnichannel EngagementEngage users across mobile, web, and the in-app experience
+Journey OrchestrationVisually build and deliver omnichannel campaigns in seconds
+Campaign OptimizationPurpose-built tools for optimizing all of your campaigns
+Lifecycle OptimizationGuided frameworks to move users across lifecycle stages
+RenderMaxTM
+Push Notifications
+Email Automation
+WhatsApp
+In-App Messaging
+Web Messaging
+SMS
+Signed CallTM
+Scribe
+IntelliNODE
+Gaming
+Ecommerce
+FinTech
+Media & Entertainment
+Travel & Transportation
+Food Tech
+Subscription Apps
+Blog
+Case Studies
+Webinar & Events
+Videos & Podcasts
+Whitepapers & Ebooks
+Guides
+Benchmark Reports
+Product Releases
+Interactive Tools
+Demo Center
+About Us
+Partners
+Press & Media
+Careers
+CleverTap4Good
+Contact Us
+Case Study
+Smart Personal Assistant App 24me Improves Conversionsby 6% by Optimizing Onboarding Using CleverTap
+
+The 24me Story
+24me is an award-winning personal assistant app that helps millions of people across the globe to boost productivity. It’s an easy-to-use and yet powerful app that puts everything related to your schedule in one place: your CALENDAR, TO-DO LIST, NOTES and personal accounts. 24me saves you time for your real priorities in life.
+Challenges
+24me figured out that getting new users to watch their onboarding tutorial was the best way to increase adoption of their features. They wanted to track all users who reached the tutorial page but did not watch the video. 24me engaged these users via email to persuade them to watch the tutorial.
+They also needed to understand how users interacted within their app and what prompted app uninstalls.
+Once the above two problems were taken care of, they wanted to identify the time when users were most active on their app and specific actions users did during those times.
+Solution
+24me used CleverTap’s analytics to understand user behavior. They used Flows to understand what their users did after launching the app and tracked their actions. Once these actions were identified, 24me used Funnels to understand where the drop-offs occur at every step.
+24me leveraged CleverTap’s segmentation to track all users who clicked on the tutorial page but did not watch the video. Using an action/inaction email campaign, they sent out an informative email reminder to users to bring them back to the video page, resulting in increased viewership of the tutorial.
+Flows
+24me can see exactly where and how users navigate the app and which actions lead to uninstalls.
+Rich User Profiles & Live Segments
+24me now understands their users better and can send the right message at the right time. With more effective marketing campaigns, they’re driving even higher user engagement.
+Inaction Email Campaigns
+Sending timely reminder emails to an audience segment who showed intent but did not go through with the action led to 6% additional views of their video tutorial.
+© 2013 onwards. All Rights Reserved. CleverTap is brought to you by WizRocket, Inc.
