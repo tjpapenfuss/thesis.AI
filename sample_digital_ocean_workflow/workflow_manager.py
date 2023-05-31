@@ -31,7 +31,6 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
 
         if page_data:
             page_data = page_data
-            print(page_data)
         else:
             page_data = {'pid':'NOT FOUND/'+url_cleaned.replace("/","_"),'did':'domainid not found','orgid':'orgid not found'}
 
@@ -45,7 +44,6 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
             
             # Step 2: Data Transformation
             transformed_data = spaces_upload.transform_data(page_text)
-            print("step 2 complete")
 
             # Step 3: Storing Data in DigitalOcean Spaces
             # object_name = out_file_name
@@ -53,7 +51,6 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
             orgid = str(page_data['orgid'])
             domainid = str(page_data['did'])
             today = str(date.today())
-            print("step 3 complete")
 
             # Step 4: Get the keywords in the Website. Add in pid, orgid, and did. 
             keyword_JSON = key_word_matcher.count_keywords(page_text, keywords)
@@ -62,7 +59,6 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
             keyword_JSON['orgid']=orgid #Adding the Organization ID to the output
             keyword_JSON['did']=domainid #Adding the Domain ID to the output
             json_output = json.dumps(keyword_JSON, indent=4)
-            print("step 4 complete")
 
             #print(today)
             metadata = {'URL': url, 'Ingestion_Date': today,'URL_cleaned':url_cleaned,'orgid':orgid,'domainid':domainid}
@@ -72,7 +68,6 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
             print("Webpage " + url + "\nhas been successfully writen to file: " + out_file_name)
             mongo.send_json_to_mongodb(json_data=json_output,orgid=orgid)
             print("mongo file upload done")
-            Print("Step 5 complete")
 
 
             # # Step 4: Storing Transformed Data in DigitalOcean Spaces
