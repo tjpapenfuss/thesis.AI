@@ -16,11 +16,11 @@ def getpagedetails(url):
         connection = db_connect()
         cursor = connection.cursor()
         connection.autocommit = True
-        sql = """select p.pageid,p.domainid,o.orgid from pages p left join domainorgrelation o on o.domainid = p.domainid where pageurl = %s"""
+        sql = """select p.pageid,p.domainid,d1.orgid, string_agg(p2.pageurl, ', ') AS link_list FROM pages p left join domainorgrelation d1 on d1.domainid = p.domainid left join pagerelation pr on pr.startpage = p.pageid left join pages p2 on p2.pageid = pr.endpage left join domainorgrelation o2 on p2.domainid = o2.domainid left join domains d2 on d2.domainid = o2.domainid left join orgs or1 on or1.orgid = o2.orgid where p.pageurl = %s and (d2.orgrelationignore is False or d2.orgrelationignore is null) GROUP BY p.pageid,p.domainid,d1.orgid"""
         cursor.execute(sql,[url])
         result = cursor.fetchall()
         if result:
-            return({'pid':result[0][0],'did':result[0][1],'orgid':result[0][2]})
+            return({'pid':result[0][0],'did':result[0][1],'orgid':result[0][2],'links':result[0][3].split(',')})
         else:
         	return(False)
     except (Exception) as error:
