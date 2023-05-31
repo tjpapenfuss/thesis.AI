@@ -57,7 +57,8 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
         if page_data:
             page_data = page_data
         else:
-            page_data = {'pid':'NOT FOUND/'+url_cleaned.replace("/","_"),'did':'domainid not found','orgid':'orgid not found'}
+            print("NOT FOUND")
+            page_data = {'pid':'NOT_FOUND/'+url_cleaned.replace("/","_"),'did':'domainid not found','orgid':'orgid not found'}
 
         if page_text:
             
