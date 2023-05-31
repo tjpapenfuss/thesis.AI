@@ -54,12 +54,8 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
         page_data = database.getpagedetails(url_cleaned)
         keywords = database.getkeywords()
 
-        if page_data:
-            page_data = page_data
-        else:
-            print("NOT FOUND")
+        if page_data is None:
             page_data = {'pid':'NOT_FOUND/'+url_cleaned.replace("/","_"),'did':'domainid not found','orgid':'orgid not found'}
-
         if page_text:
             
             # Step 2: Data Transformation
@@ -104,10 +100,3 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
 
             execution_time = end_time - start_time
             print(f"The website {url} took {execution_time} seconds to create.")
-
-            # # Step 4: Storing Transformed Data in DigitalOcean Spaces
-            # transformed_object_name = 'transformed_' + out_file_name
-            # metadata = {'Author': 'John Doe', 'Timestamp': '2023-05-24'}
-            # spaces_upload.upload_to_spaces(bucket_name, transformed_object_name, transformed_data, 
-            #     s3config["endpoint_url"], s3config["aws_access_key_id"], 
-            #     s3config["aws_secret_access_key"], Metadata = metadata)

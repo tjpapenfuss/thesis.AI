@@ -20,14 +20,16 @@ def getpagedetails(url):
         cursor.execute(sql,[url])
         result = cursor.fetchall()
         if result:
-            return({'pid':result[0][0],'did':result[0][1],'orgid':result[0][2],'links':result[0][3].split(',')})
+            return_val = ({'pid':result[0][0],'did':result[0][1],'orgid':result[0][2],'links':result[0][3].split(',')})
         else:
-        	return(False)
+        	return_val =  None
+        
     except (Exception) as error:
-        return(error)
+        return_val = None
     finally:
         cursor.close()
         connection.close()
+        return return_val
 
 def getkeywords():
     try:
