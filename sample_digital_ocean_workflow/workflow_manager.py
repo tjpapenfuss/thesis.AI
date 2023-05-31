@@ -23,8 +23,7 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
         url = myline.strip()        # Each line is a new URL to open and scrape
 
         # Step 1: Webpage Scraping
-        page_text = web_scrape.extract_text_from_url(url)
-        print("page_text = ",page_text)
+        page_text = web_scrape.extract_text_from_url(url)      
         url_cleaned = formata.clean_page(url)
         page_data = database.getpagedetails(url_cleaned)
         keywords = database.getkeywords()
