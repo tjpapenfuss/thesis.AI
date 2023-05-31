@@ -20,6 +20,7 @@ bucket_name = OBJECT_STORAGE_BUCKET
 
 with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
     for myline in myfile:              # For each line, read to a string,
+        print(myline)
         url = myline.strip()        # Each line is a new URL to open and scrape
 
         # Step 1: Webpage Scraping
