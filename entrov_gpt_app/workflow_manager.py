@@ -8,6 +8,12 @@ import json
 import time
 import openai
 import traceback
+def error_logger(e, url):
+    with open("error_log_summarization.txt", "a") as file:
+        file.write(f"Invalid request error retrieving: {url}")
+        file.write("Here is the error:\n")
+        file.write(traceback.format_exc())
+        file.write("\n")
 
 def write_json_to_file(json_data, filename, directory):
     # Create the directory if it doesn't exist
@@ -52,16 +58,9 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
                 json_filename = webpage_guid + ".json"
                 write_json_to_file(json_data=json_data, filename=json_filename, directory=directory)
             except openai.error.InvalidRequestError as e:
-                with open("error_log_summarization.txt", "a") as file:
-                    file.write(f"Invalid request error retrieving: {url}")
-                    file.write("Here is the error:\n")
-                    file.write(traceback.format_exc())
-                    file.write("\n")
+                error_logger(e, url=url)
             except Exception as e:
-                    file.write(f"Some other error retrieving: {url}")
-                    file.write("Here is the error:\n")
-                    file.write(traceback.format_exc())
-                    file.write("\n")
+                error_logger(e, url=url)
             
             end_time = time.time()
 

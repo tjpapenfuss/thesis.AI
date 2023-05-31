@@ -27,10 +27,7 @@ def summarize_doc(document):
 
     #text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=0)
     texts = text_splitter.create_documents([document])
-    # print(len(texts))
-    # chain = load_summarize_chain(llm, chain_type="refine", return_intermediate_steps=True)
-    # #docs = [Document(page_content=t) for t in texts[4:7]]
-    # print(chain({"input_documents": texts}, return_only_outputs=True))
+
     map_prompt = """
     You will be given a website. 
     Your goal is to give a summary of this website so that a reader will have a full understanding.
@@ -46,15 +43,3 @@ def summarize_doc(document):
                                 prompt=map_prompt_template)
     return map_chain.run(texts)
 
-
-
-# Example usage for above functions
-# input_string = "example"
-# encoded_guid = encode_to_guid(input_string)
-# print("Encoded GUID:", encoded_guid)
-
-# guid = encode_to_guid("areenablingpartnersuccess.txt")
-# print("GUID IS: ", guid)
-
-# doc = read_file("areenablingpartnersuccess.txt")
-# print(summarize_doc(document=doc))
