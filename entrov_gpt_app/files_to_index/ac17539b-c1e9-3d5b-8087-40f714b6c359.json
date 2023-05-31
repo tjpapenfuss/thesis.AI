@@ -1,0 +1,5 @@
+{
+    "URL": "https://aws.amazon.com/partners/success/gett/",
+    "Time stamp": "2023-05-30",
+    "Summary": "Gett is a taxi booking app available in over 120 cities worldwide. The company uses Amazon Web Services (AWS) to host its corporate IT environment. As the company grew, it faced challenges related to its backup and restore procedures, particularly tracking snapshots and instances. To address this challenge, Gett worked with AWS Advanced Technology Partner N2WS to implement its Backup & Recovery solution, which allowed the company to back up and restore its AWS environment more efficiently. By using N2WS, Gett was able to save $60,000 per year and improve its data protection and regulatory compliance, which has helped the company prepare for its initial public offering (IPO) in 2020. \n\nN2WS provides backup, recovery, and disaster recovery solutions for Amazon EC2, Amazon RDS, Amazon Redshift, Amazon Aurora, and Amazon DynamoDB. Its products protect more than 100,000 AWS instances for around 3,500 customers, including Fortune 500 companies and managed service providers operating large-scale AWS production environments."
+}
