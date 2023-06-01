@@ -10,7 +10,7 @@ import config
 
 os.environ["OPENAI_API_KEY"] = config.api_key
 
-def construct_index():
+def construct_index(documents):
     max_input_size = 4096
     num_outputs = 512
     max_chunk_overlap = 20
@@ -19,8 +19,6 @@ def construct_index():
     prompt_helper = PromptHelper(max_input_size, num_outputs, max_chunk_overlap, chunk_size_limit=chunk_size_limit)
 
     llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo", max_tokens=num_outputs))
-
-    documents = SimpleDirectoryReader(mongo_db_connector.get_mongodb_contents(collection = "566f6980-2166-4718-ba88-77610e998cbd")).load_data()
 
     index = GPTSimpleVectorIndex(documents, llm_predictor=llm_predictor, prompt_helper=prompt_helper)
 
@@ -38,18 +36,16 @@ iface = gr.Interface(fn=chatbot,
                      outputs="text",
                      title="Custom-trained AI Chatbot")
 
-# json_list = []
-# for item in mongo_db_connector.get_mongodb_contents(collection = "566f6980-2166-4718-ba88-77610e998cbd"):
-#     item = json.loads(item)
-#     print(item["keyword_counts"])
-#     new_string = [item["Summary"], item["keyword_counts"]]
-#     new_string = str(new_string)
-#     json_list += [new_string]
+json_list = []
+for item in mongo_db_connector.get_mongodb_contents(collection = "orgid not found"):
+    item = json.loads(item)
+    new_string = str(item["URL"]) + str(item["Summary"]) + str(item["keyword_counts"])
+    json_list.append(new_string)
 
-print("Starting")
-#print(json_list)
+documents = [Document(t) for t in json_list]
+
 start_time = time.time()
-index = construct_index()
+index = construct_index(documents=documents)
 end_time = time.time()
 
 execution_time = end_time - start_time
