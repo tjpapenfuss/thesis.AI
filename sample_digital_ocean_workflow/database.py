@@ -20,7 +20,7 @@ def getpagedetails(url):
         cursor.execute(sql,[url])
         result = cursor.fetchall()
         if result:
-            return_val = ({'pid':result[0][0],'did':result[0][1],'orgid':result[0][2],'links':result[0][3].split(',')})
+            return_val = ({'pid':result[0][0],'did':result[0][1],'orgid':result[0][2],'links':(lambda x: x.split(',') if x else [])(result[0][3])})
         else:
         	return_val =  None
         
