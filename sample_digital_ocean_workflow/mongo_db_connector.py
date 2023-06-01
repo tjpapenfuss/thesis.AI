@@ -53,15 +53,15 @@ def send_json_to_mongodb(json_data,orgid):
 #send_json_to_mongodb(json_data,orgid)
 
 
-def get_mongodb_contents():
+def get_mongodb_contents(collection=config.MONGO_COLLECTION):
     # Connect to the MongoDB server
-    client = pymongo.MongoClient(config.MONGO_CONN)
+    client = pymongo.MongoClient(config.mongo_string)
 
     # Access the desired database
     db = client[config.MONGO_DATABASE]
 
     # Access the desired collection within the database
-    collection = db[config.MONGO_COLLECTION]
+    collection = db[collection]
 
     # Retrieve all documents from the collection
     documents = collection.find()
