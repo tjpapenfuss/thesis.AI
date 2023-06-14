@@ -1,13 +1,13 @@
 # External packages
 import json
-from datetime import date
+from datetime import datetime
 import os
 import openai
 import traceback
 import time
 
 #Internal packages
-from config import OBJECT_STORAGE_KEY, OBJECT_STORAGE_SECRET, OBJECT_STORAGE_REGION, OBJECT_STORAGE_BUCKET
+from config import OBJECT_STORAGE_REGION, OBJECT_STORAGE_BUCKET
 import spaces_upload
 import database
 import formata
@@ -35,14 +35,52 @@ def write_json_to_file(json_data, filename, directory):
     with open(filepath, 'w') as file:
         json.dump(json_data, file, indent=4)
 
-s3config = {
-    "region_name": OBJECT_STORAGE_REGION,
-    "endpoint_url": "https://{}.digitaloceanspaces.com".format(OBJECT_STORAGE_REGION),
-    "aws_access_key_id": OBJECT_STORAGE_KEY,
-    "aws_secret_access_key": OBJECT_STORAGE_SECRET }
+def refine(orgid,url,page_text):
+    #step 1: create doc summary
+    try:
+        summary = doc_summarization.summarize_doc(document=page_text)        
+    except openai.error.InvalidRequestError as e:
+        summary = "Failed to create the summary file for this website."
+        error_logger(e, url=url)
+    except Exception as e:
+        summary = "Failed to create the summary file for this website."
+        error_logger(e, url=url)
+    finally:
+        #step 2: format updates to push
+        updates = {
+            'summary':summary,
+            'refined':True,
+            'lastupdate':datetime.utcnow()
+        }
+        #step 3: push updates to mongodb source
+        try:
+            mongo.updateitem(database='scraped',collection=orgid,item_field='page_url',item_value=url,update_file=updates)
+            return(True)
+        except:
+            return(False)
+        
+def run(domains: 'list' = None):
+    #step 1: get orgid from input domain
+    orgids = [{'domain':item,'orgid':database.getorgid(item)} for item in domains]
+    
+    #step 2: get pages from domain that need processing
+    need_refining = [mongo.get_pages_to_refine(database='scraped',collection=item['orgid']) for item in orgids]
+    
+    #step 3: summarize pages that have page data but processed set to false
+    index = 0
+    for item in need_refining:
+        for record in item:
+            print(record['page_url'])
+            refine(orgid=orgids[index]['orgid'],url=record['page_url'],page_text=record['page_text'])            
+        index = index + 1
 
-bucket_name = OBJECT_STORAGE_BUCKET
+    #step 3: run trainer
+    #?????
 
+#example
+#print(run(domains=['aws.amazon.com']))
+
+"""
 with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
     for myline in myfile:              # For each line, read to a string,
         url = myline.strip()        # Each line is a new URL to open and scrape
@@ -100,3 +138,15 @@ with open ('websites.txt', 'rt') as myfile:  # Open websites.txt for reading
 
             execution_time = end_time - start_time
             print(f"The website {url} took {execution_time} seconds to create.")
+
+
+
+ARCHIVED
+s3config = {
+    "region_name": OBJECT_STORAGE_REGION,
+    "endpoint_url": "https://{}.digitaloceanspaces.com".format(OBJECT_STORAGE_REGION),
+    "aws_access_key_id": OBJECT_STORAGE_KEY,
+    "aws_secret_access_key": OBJECT_STORAGE_SECRET }
+
+bucket_name = OBJECT_STORAGE_BUCKET
+"""

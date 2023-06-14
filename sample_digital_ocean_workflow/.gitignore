@@ -2,3 +2,4 @@
 config.py
 helpers/config.py
 index.json
+ca-certificate.crt

@@ -31,6 +31,25 @@ def getpagedetails(url):
         connection.close()
         return return_val
 
+def getorgid(domain):
+    try:
+        connection = db_connect()
+        cursor = connection.cursor()
+        connection.autocommit = True
+        sql = """select dr.orgid from domainorgrelation dr left join domains d on d.domainid=dr.domainid where domain = %s"""
+        cursor.execute(sql,[url])
+        result = cursor.fetchone()
+        if result:
+            return_val = result
+        else:
+            return_val =  None
+    except (Exception) as error:
+        return_val = None
+    finally:
+        cursor.close()
+        connection.close()
+        return return_val
+
 def getkeywords():
     try:
         connection = db_connect()
@@ -54,7 +73,7 @@ def get100randomcasestudies():
         sql = """select pageurl from pages, to_tsquery('english', 'case:* & stud:*') AS q where (pages.pagedescription is not NULL and tsv_pageurl @@ q) and pageurl not ilike '%443%' and language = 'en' order by random() limit 100"""
         cursor.execute(sql)
         result = cursor.fetchall()
-        return([item[0] for item in result])
+        return(['https://'+item[0] for item in result])
     except (Exception) as error:
         return(error)
     finally:

@@ -2,6 +2,7 @@ import pymongo
 from pymongo import MongoClient
 import json
 import config
+import re
 
 def get_mongo_prod(name):
     # Provide the mongodb atlas url to connect python to mongodb using pymongo
@@ -13,14 +14,17 @@ def get_mongo_prod(name):
     #return document storage database
     return(client[name])
 
-def get_collection(colname):
-    #get database from document storage
-    database = get_mongo_prod('Key_words')
-    
-    #return collection from identified database
-    return(database[colname])
+def get_collection(database,colname):
+    # Connect to the MongoDB server
+    client = pymongo.MongoClient(config.mongo_string)
 
-print(get_mongo_prod('Key_words'))
+    # Access the desired database
+    db = client[config.MONGO_DATABASE]
+
+    # Access the desired collection within the database
+    collection = db[config.MONGO_COLLECTION]
+
+    return(collection)
 
 def send_json_to_mongodb(json_data,orgid):
     # Parse JSON string to Python dictionary
@@ -71,7 +75,37 @@ def get_mongodb_contents(collection=config.MONGO_COLLECTION):
 
     return json_data
 
-# Example usage
-#data = get_mongodb_contents()
-#for doc in data:
-#    print(doc)
+def get_pages_to_refine(database:'str',collection:'str'):
+    collection = get_collection(database,collection)
+    
+    #identifies which key words to search for in pages to maximize high quality summaries
+    keywords = ['/case/', '/study/', '/customer/', '/success/', '/partner/', '/solution/']
+    pattern = '|'.join(map(re.escape, keywords))
+    regex = re.compile(pattern, re.IGNORECASE)
+    #runs search to find pages matching below logic: key words present in URL, page_text exists, page is in language, and page has not been refined.
+    results = collection.find(
+        {
+        'page_url': {'$regex': regex},
+        'page_text': {'$exists': True},
+        'page_language': 'en',
+        'refined': False
+        },
+        {
+        'page_url': 1,
+        'page_text': 1,
+        '_id': 0
+        }
+    )
+    #returns results
+    if results:
+        result_val = [item for item in results]
+    else:
+        result_val = None
+    return(result_val)
+
+def updateitem(database:'str',collection:'str',item_field:'str',item_value:'str',update_file:'dict'):
+    collection = get_collection(database,collection)
+    item_to_update = {item_field: item_value }
+    updates = { "$set": update_file }
+    collection.update_one(item_to_update, updates)
+
