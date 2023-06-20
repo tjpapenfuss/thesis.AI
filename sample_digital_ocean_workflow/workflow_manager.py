@@ -13,8 +13,12 @@ import database
 import formata
 import web_scrape 
 import mongo_db_connector as mongo
-import key_word_matcher
+import key_word_matcher as keyword
 import doc_summarization
+
+keywords_master = database.getkeywords()
+#orgs_master = database.getorgs()
+
 
 def error_logger(e, url):
     with open("error_log_summarization.txt", "a") as file:
@@ -45,10 +49,22 @@ def refine(orgid,url,page_text):
     except Exception as e:
         summary = "Failed to create the summary file for this website."
         error_logger(e, url=url)
+    #step 2: get keywords
+    try:
+        keywords = keyword.count_keywords(text=page_text,keywords=keywords_master)
+    except:
+        keywords = 'Failed to detect keywords'
+    #step 3: get org references
+    #try:
+    #    reference_orgs = keyword.count_keywords(text=summary,keywords=orgs_master)
+    #except:
+    #    reference_orgs = 'Failed to detect keywords'
+    
     finally:
-        #step 2: format updates to push
+        #step 4: format updates to push
         updates = {
             'summary':summary,
+            'keywords':keywords,
             'refined':True,
             'lastupdate':datetime.utcnow()
         }
@@ -64,7 +80,7 @@ def run(domains: 'list' = None):
     orgids = [{'domain':item,'orgid':database.getorgid(item)} for item in domains]
     
     #step 2: get pages from domain that need processing
-    need_refining = [mongo.get_pages_to_refine(database='scraped',collection=item['orgid']) for item in orgids]
+    need_refining = [mongo.get_pages_to_refine(database='scraped',collection=item['orgid']) for item in orgids]    
     
     #step 3: summarize pages that have page data but processed set to false
     index = 0
@@ -73,9 +89,9 @@ def run(domains: 'list' = None):
             print(record['page_url'])
             refine(orgid=orgids[index]['orgid'],url=record['page_url'],page_text=record['page_text'])            
         index = index + 1
+    
+    #step 4: Add pageid, detect keywords
 
-    #step 3: run trainer
-    #?????
 
 #example
 #print(run(domains=['aws.amazon.com']))

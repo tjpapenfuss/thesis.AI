@@ -65,6 +65,21 @@ def getkeywords():
         cursor.close()
         connection.close()
 
+def getorgs():
+    try:
+        connection = db_connect()
+        cursor = connection.cursor()
+        connection.autocommit = True
+        sql = """select orgname_custom from orgs"""
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        return([item[0] for item in result])
+    except (Exception) as error:
+        return(error)
+    finally:
+        cursor.close()
+        connection.close()
+
 def get100randomcasestudies():
     try:
         connection = db_connect()
