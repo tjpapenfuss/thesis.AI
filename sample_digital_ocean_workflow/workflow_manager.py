@@ -92,7 +92,6 @@ def run(domains: 'list' = None):
     
     #step 4: Add pageid, detect keywords
 
-
 #example
 #print(run(domains=['aws.amazon.com']))
 

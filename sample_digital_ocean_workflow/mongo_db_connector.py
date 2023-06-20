@@ -109,3 +109,12 @@ def updateitem(database:'str',collection:'str',item_field:'str',item_value:'str'
     updates = { "$set": update_file }
     collection.update_one(item_to_update, updates)
 
+def get_refined(orgids:'list'):
+    results = []
+    for org in orgids:
+        collection = get_collection(database=config.MONGO_DATABASE,colname=org)
+        docs = collection.find({'refined':True},{'page_url':1,'summary':1,'keywords':1,'_id':0})
+        for d in docs:
+            results.append(d)
+    return(results)
+
