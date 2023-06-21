@@ -22,7 +22,7 @@ def get_collection(database,colname):
     db = client[config.MONGO_DATABASE]
 
     # Access the desired collection within the database
-    collection = db[config.MONGO_COLLECTION]
+    collection = db[colname]
 
     return(collection)
 
