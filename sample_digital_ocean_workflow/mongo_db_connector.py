@@ -79,7 +79,7 @@ def get_pages_to_refine(database:'str',collection:'str'):
     collection = get_collection(database,collection)
     
     #identifies which key words to search for in pages to maximize high quality summaries
-    keywords = ['/case/', '/study/', '/customer/', '/success/', '/partner/', '/solution/']
+    keywords = ['case-stud', 'casestud', 'customer-stor', 'customerstor']
     pattern = '|'.join(map(re.escape, keywords))
     regex = re.compile(pattern, re.IGNORECASE)
     #runs search to find pages matching below logic: key words present in URL, page_text exists, page is in language, and page has not been refined.

@@ -37,10 +37,10 @@ def getorgid(domain):
         cursor = connection.cursor()
         connection.autocommit = True
         sql = """select dr.orgid from domainorgrelation dr left join domains d on d.domainid=dr.domainid where domain = %s"""
-        cursor.execute(sql,[url])
+        cursor.execute(sql,[domain])
         result = cursor.fetchone()
         if result:
-            return_val = result
+            return_val = result[0]
         else:
             return_val =  None
     except (Exception) as error:

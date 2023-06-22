@@ -78,10 +78,10 @@ def refine(orgid,url,page_text):
 def run(domains: 'list' = None):
     #step 1: get orgid from input domain
     orgids = [{'domain':item,'orgid':database.getorgid(item)} for item in domains]
-    
+
     #step 2: get pages from domain that need processing
-    need_refining = [mongo.get_pages_to_refine(database='scraped',collection=item['orgid']) for item in orgids]    
-    
+    need_refining = [mongo.get_pages_to_refine(database='scraped',collection=item['orgid']) for item in orgids]
+
     #step 3: summarize pages that have page data but processed set to false
     index = 0
     for item in need_refining:
