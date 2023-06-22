@@ -53,3 +53,10 @@ def upload_file_spaces(space_name, file_src, save_as, endpoint, access_key, secr
     if isinstance(metadata, dict):
         extra_args["Metadata"] = metadata
     s3.upload_file(file_src, space_name, save_as, ExtraArgs=extra_args)
+
+
+def download_file_spaces(space_name, file_name, destination, endpoint, access_key, secret_key):
+    s3 = boto3.client('s3', endpoint_url=endpoint,
+        aws_access_key_id=access_key,
+        aws_secret_access_key=secret_key)
+    s3.download_file(space_name, file_name, destination)

@@ -1,6 +1,6 @@
 # Internal files
 import mongo_db_connector as mongo
-import spaces_upload as spaces
+import spaces_connector as spaces
 import config
 
 # External files
@@ -14,13 +14,15 @@ from datetime import datetime
 # -----------------------------------------------------------------------------------------------------------------------------
 # Function to build the index for OpenAI ChatBot. 
 # Prereqs: 
-#       - config.py containts the correct api key for 
+#       - config.py containts the correct OpenAI api key; config.api_key
 #       - config.py is configured with the connection string to the mongo DB; variable name -> mongo_string
 #       - config.py is has the correct database to search to the mongo DB; variable name -> MONGO_DATABASE
 #       - config.py has spaces configurations OBJECT_STORAGE_KEY, OBJECT_STORAGE_SECRET, OBJECT_STORAGE_REGION, and OBJECT_STORAGE_BUCKET
 # -----------------------------------------------------------------------------------------------------------------------------
 
 os.environ["OPENAI_API_KEY"] = config.api_key
+
+SPACES_JSON_FILE_NAME = "initial_index1.json"
 
 def build_index(documents):
     max_input_size = 4096
@@ -71,10 +73,9 @@ s3config = {
 today = str(datetime.today())
 # Set up the metadata to attach to the spaces storage
 metadata = {'Orgids': ','.join(org_list), 'Ingestion_Date': today}
-object_name = "initial_index1.json"
 
 # Upload the indexed file to spaces for storage. 
 spaces.upload_file_spaces(s3config["bucket_name"], 
-    './index.json', object_name, 
+    './index.json', SPACES_JSON_FILE_NAME, 
     s3config["endpoint_url"], s3config["aws_access_key_id"], 
     s3config["aws_secret_access_key"], metadata = metadata)
